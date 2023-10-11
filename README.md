@@ -1,4 +1,4 @@
-<h1 align="center">PHP CLI Example</h1>
+<h1 align="center">KAJOOM PHP CLI Example</h1>
 
 <p align="center">A simple PHP command-line tool starter.</p>
 
@@ -50,11 +50,11 @@ phpclistarter play
 ## Update
 
 ```
-composer global update webmarka/php-cli-starter
+composer global update kajoom/php-cli-starter
 ```
 
 ## Delete
 
 ```
-composer global remove webmarka/php-cli-starter
+composer global remove kajoom/php-cli-starter
 ```

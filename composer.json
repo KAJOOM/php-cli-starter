@@ -1,6 +1,7 @@
 {
     "name": "kajoom/php-cli-starter",
     "description": "PHP command-line tool demo",
+    "version": "0.0.1",
     "type": "library",
     "license": "MIT",
     "autoload": {
