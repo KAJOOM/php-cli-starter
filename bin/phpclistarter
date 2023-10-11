@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+// TODO: Since Composer 2.2 : The $_composer_autoload_path global variable.
+$root = dirname(__DIR__);
+if (! is_file(sprintf('%s/vendor/autoload.php', $root))) {
+    $root = dirname(__DIR__, 4);
+}
+require sprintf('%s/vendor/autoload.php', $root);
+
+use Kajoom\PhpCliStarter\Commands\Play;
+use Symfony\Component\Console\Application;
+
+// Config.
+$singleCommand = false;
+
+// Instanciation.
+$command = new Play();
+$application = new Application();
+
+// Logic.
+$application->add($command);
+if ($singleCommand) $application->setDefaultCommand($command->getName());
+
+// Execution.
+$application->run();

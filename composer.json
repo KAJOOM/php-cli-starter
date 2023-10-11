@@ -1,0 +1,30 @@
+{
+    "name": "kajoom/php-cli-starter",
+    "description": "PHP command-line tool demo",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kajoom\\PhpCliStarter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marc-Antoine Minville",
+            "email": "uhpbs568@duck.com",
+            "homepage": "https://marc-antoine-minville.com/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4|^8.0",
+        "symfony/console": "^5.0|^6.0"
+    },
+    "bin": [
+        "bin/phpclistarter"
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    }
+}
