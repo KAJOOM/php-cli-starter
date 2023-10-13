@@ -2,6 +2,7 @@
 
 namespace Kajoom\PhpCliStarter\Commands;
 
+use Kajoom\PhpCliStarter\Services\Header;
 use Kajoom\PhpCliStarter\Services\InputOutput;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -32,12 +33,17 @@ class Play extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        $io = new InputOutput($input, $output);
+        
+        // Header.
+        $header = new Header();
+        $header->display($io);
+        
+        // Game logic.
         $term1 = rand(1, 10);
         $term2 = rand(1, 10);
         $result = $term1 + $term2;
-
-        $io = new InputOutput($input, $output);
-
+        
         $answer = (int) $io->question(sprintf('What is %s + %s?', $term1, $term2));
 
         if ($answer === $result) {
